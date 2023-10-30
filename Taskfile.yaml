@@ -1,0 +1,23 @@
+version: '3'
+
+vars:
+  GO_VERSION: 1.21.3
+
+tasks:
+  #TODO add MacOS support
+
+  install-go:
+    cmds:
+      - wget "https://golang.org/dl/go{{.GO_VERSION}}.linux-amd64.tar.gz"
+  	  - sudo tar -C /usr/local -xzf go${{.GO_VERSION}}.linux-amd64.tar.gz
+	    - rm go$(GO_VERSION).linux-amd64.tar.gz
+
+  init-go:
+    cmds:
+      - echo 'export PATH=$$PATH:/usr/local/go/bin' >> $${HOME}/.bashrc
+  	  - echo 'export PATH=$$PATH:$${HOME}/go/bin' >> $${HOME}/.bashrc
+  setup:
+    cmds:
+      - task: install-go
+      - task: init-go
+      - echo "Go version: {{.GO_VERSION}} has been installed"
