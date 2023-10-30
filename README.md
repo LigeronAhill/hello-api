@@ -25,5 +25,3 @@
 - [ ] Store translation in short-term storage
 - [ ] Call existing service for translation
 - [ ] Move towards long-term storage
-
->>>>>>> c6b954d (Initial cration)
