@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# hello-api
-Shipping Go
-=======
 # Hello API
 
 ## Dependencies
