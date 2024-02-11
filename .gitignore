@@ -17,3 +17,5 @@
 /bazel-*
 api
 .vscode
+coverage.out
+cover.xhtml
